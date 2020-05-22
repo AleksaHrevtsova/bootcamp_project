@@ -25,6 +25,15 @@
   font-weight: bold;
 }
 
+
+@font-face {
+  font-family: "Coustard Regular";
+  src:
+    url(/fonts/Coustard-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -364,6 +373,114 @@ div.ant-carousel-arrow-right {
   top: 44%;
   display: block;
   background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+}
+
+/* стили секции 4 */
+.s4 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.s4_desc {
+  display: block;
+  margin: 0 20px;
+  text-align: center;
+  font-family: "Gotham Pro";
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: bold;
+  padding-top: 122px;
+  position: relative;
+}
+
+.s4_desc::before {
+  content: "❞";
+  position: absolute;
+  top: 48%;
+  left: 38%;
+  font-size: 118px;
+  font-family: "Coustard Regular";
+  color: rgb(247, 223, 8);
+}
+
+.s4_list {
+  display: flex;
+  flex-flow: column;
+  margin: 0 20px;
+  padding-left: 55px;
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 26px;
+  color: #6c6e79;
+  padding-top: 44px;
+  padding-bottom: 66px;
+  position: relative;
+}
+
+.s4_list::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 1px solid rgb(247, 223, 8);
+  height: 174px;
+  top: 50px;
+  left: 28px;
+}
+
+/* стили секции 5 */
+.s5 {
+  background-color: #303030;
+}
+
+.s5_list {
+  display: flex;
+  flex-flow: column;
+  margin: 0 20px;
+  padding-top: 72px;
+}
+
+.s5_list li {
+  padding-left: 75px;
+  padding-bottom: 30px;
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 24px;
+  color: #a4a4a4;
+}
+
+.s5_list li::before {
+  /*  */
+}
+
+.s5_list-title {
+  padding-left: 32px;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-family: "OpenSans";
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+.s5_list-title::after {
+  /*  */
+}
+
+.contacts li {
+  position: relative;
+}
+
+.contacts li:last-child::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-image: url(../images/icons/icon_viber.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 46px;
 }
 
 /* стили футера */
