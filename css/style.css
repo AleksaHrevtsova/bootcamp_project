@@ -1,3 +1,4 @@
+/* тут подключаем файлы шрифтов из папки fonts */
 @font-face {
   font-family: "OpenSans";
   src: url(/fonts/OpenSans-Regular.eot) format("embedded-opentype"),
@@ -32,6 +33,7 @@
   font-weight: normal;
 }
 
+/* тут обнуляем дефолные стили (стили по умолчанию) */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -46,11 +48,14 @@ ul {
   padding: 0;
 }
 
+/* задаем параметры ширины контента, ввиду Mobile First */
 .container {
   min-width: 320px;
   margin: 0 auto;
-  border: 1px solid black;
+  /* убрала границу контейнера, она нам больше не понадобится */
 }
+
+/* СТИЛИ ДЛЯ MOBILE */
 
 /* стили хэдэра */
 .header_nav {
@@ -62,7 +67,10 @@ ul {
 .logo {
   text-transform: capitalize;
   color: black;
-  padding-top: 36px;
+
+  /* изменила размер верхнего внутреннего отступа */
+  padding-top: 30px;
+
   padding-bottom: 24px;
   font-family: "OpenSans";
   font-size: 16px;
@@ -74,8 +82,8 @@ ul {
   position: absolute;
   width: 46px;
   height: 46px;
-  background-color: rgb(247, 223, 8);
-  background-image: url(../images/icons/icon_sofa.png);
+  background-color: rgb(198, 233, 158);
+  background-image: url(../images/icons/logo-icon32.png);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
@@ -98,7 +106,7 @@ ul {
 
 .nav_list-item a:hover,
 .nav_list-item a:focus {
-  color: red;
+  color: rgb(167, 144, 243);
   font-size: large;
 }
 
@@ -107,7 +115,7 @@ ul {
   position: absolute;
   width: 22px;
   height: 22px;
-  background-image: url(../images/icons/icon_viber.png);
+  background-image: url(../images/fb_oval-icon16.png);
   background-repeat: no-repeat;
   background-position: center;
   left: -24px;
@@ -126,7 +134,7 @@ ul {
   align-items: flex-start;
   color: white;
   /* задаем фон с указанием цвета наложенияи пути к изображению */
-  background: #535353 url(../images/s1_back_pp.png);
+  background: #535353 url(../images/12.jpeg);
   /* добавляем формат наложения цвета на изображение */
   background-blend-mode: soft-light;
   /* центрируем изображение */
@@ -156,46 +164,67 @@ ul {
 }
 
 .s1_list {
+  /* добавлено позиционирование списка */
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  min-width: 280px;
+
+  /* изменены внутренние и внешние отступы */
+  padding-left: 20px;
+  padding-bottom: 70px;
+  margin: 0 20px;
+
   font-family: "OpenSans";
   font-size: 14px;
-  padding-left: 46px;
-  margin-right: 20px;
-  padding-bottom: 136px;
   position: relative;
 }
 
-.s1_list::before,
-.s1_list::after {
+/* добавлен селектор нового элемента разметки 
+для позиционирования псевдоэлементов */
+.s1_bottom-element {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 66px;
+  position: relative;
+}
+
+/* псевдоэлементы, создающие стрелку внизу секции
+теперь не относятся к списку, многие свойства 
+псевдоэлементов изменены в связи с этим */
+.s1_bottom-element::before,
+.s1_bottom-element::after {
   content: "/";
   position: absolute;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: bold;
-  top: 62%;
-  color: rgb(247, 223, 8);
+  color: rgb(198, 233, 158);
 }
 
-.s1_list::before {
-  transform: rotate(-65deg);
-  left: 44%;
+.s1_bottom-element::before {
+  transform: rotate(-63deg);
+  left: -16px;
 }
 
-.s1_list::after {
-  transform: rotate(25deg);
-  left: 50%;
+.s1_bottom-element::after {
+  transform: rotate(26deg);
 }
 
 .s1_list-item {
   padding-bottom: 16px;
-  position: relative;
   padding-left: 20px;
+  position: relative;
 }
 
 .s1_list-item::before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
-  background-image: url(../images/icons/icon_star.png);
+
+  /* изменены размеры */
+  width: 16px;
+  height: 16px;
+
+  background-image: url(../images/icons/s1_2.png);
   background-repeat: no-repeat;
   background-position: center;
   top: 3px;
@@ -203,7 +232,7 @@ ul {
 }
 
 .s1_list-item span {
-  color: rgb(236, 214, 15);
+  color: rgb(198, 233, 158);
 }
 
 /* стили секции 2 */
@@ -218,27 +247,46 @@ ul {
   text-align: center;
   padding-top: 67px;
   margin-bottom: 76px;
+
+  /* заданы шрифт и его размер */
+  font-size: 36px;
+  font-family: "Gotham Pro Bold";
 }
 
 .s2_list {
   display: flex;
-  flex-flow: column;
+
+  /* изменено позиционирование 
+  и добавлен нижний внутренний отступ */
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 66px;
 }
 
 .s2_list-item {
   width: 170px;
   height: 170px;
-  border: 2px solid rgb(247, 223, 8);
-  margin-bottom: 58px;
+  border: 2px solid rgb(198, 233, 158);
   padding: 50px;
   position: relative;
+
+  /* изменен правый внешний отсуп 
+  на общий внешний и его размер */
+  margin: 20px;
 }
 
 .s2_list-item:hover {
   background-color: black;
   color: white;
-  border: 10px solid rgb(247, 223, 8);
+  border: 10px solid rgb(198, 233, 158);
   transform: scale(1.2);
+}
+
+/* добавлен селектор для псевлоэлемента при ховере,
+чтобы иконка не смещалась сильно вправо */
+.s2_list-item:hover::before {
+  left: 32px;
 }
 
 .s2_list-item::before {
@@ -248,7 +296,7 @@ ul {
   height: 85px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(247, 223, 8);
+  background-color: rgb(198, 233, 158);
   border-radius: 50%;
   top: -41px;
   left: 38px;
@@ -285,7 +333,7 @@ ul {
   flex-flow: row;
   align-items: center;
   color: white;
-  background: #535353 url(../images/s3_back.png);
+  background: #535353 url(../images/16.jpeg);
   background-blend-mode: soft-light;
   background-position: center;
   background-size: cover;
@@ -297,21 +345,37 @@ ul {
 }
 
 .ant-carousel-hider {
+  /* задано позиционирование элемента */
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 320px;
+  position: relative;
+
   overflow: hidden;
 }
 
 .ant-carousel-list {
   display: flex;
+
+  /* задано направление позиционирования */
+  flex-flow: row;
+
   justify-content: flex-start;
   width: auto;
-  padding-bottom: 84px;
+  /* нижний внутренний отступ удален за ненадобностью */
 }
 
 .ant-carousel-element {
-  display: block;
-  text-align: center;
-  margin: 0 20px;
-  margin-top: 72px;
+  /* изменено позиционирование элемента и все отступы */
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 320px;
+  padding: 90px 0;
+  margin: 20px;
+
   /* flex: 0 0 auto; */
 }
 
@@ -319,7 +383,8 @@ ul {
   width: 280px;
   height: 230px;
   position: sticky;
-  /* border: 15px solid white; */
+
+  border: 20px solid;
 }
 
 .ant-carousel-element img:hover {
@@ -332,24 +397,33 @@ ul {
   font-family: "OpenSans";
   font-weight: bold;
   position: relative;
-  margin-top: 18px;
+  /* изменен внешний верхний отступ */
+  margin-top: 4px;
+  /* добавлен внутренний левый отступ */
+  padding-left: 48px;
 }
 
 .ant-carousel-element p::before {
   content: "";
   position: absolute;
-  width: 40px;
-  border: 1px solid rgb(247, 223, 8);
-  top: 8px;
-  left: 1px;
+  border: 1px solid rgb(198, 233, 158);
+
+  /* изменены длина псевдоэлемента 
+  и параметры позиционирования*/
+  width: 38px;
+  top: 10px;
+  left: 0;
 }
 
 .ant-carousel-arrow-left,
 .ant-carousel-arrow-right {
-  width: 25px;
+  /* изменена длина элемента */
+  width: 24px;
   height: 40px;
   position: absolute;
   cursor: crosshair;
+  /* добавлено свойство видимости */
+  z-index: 90;
 }
 
 /* .ant-carousel-arrow-left:hover,
@@ -359,7 +433,9 @@ ul {
 
 /* левая стрелка слайдера */
 div.ant-carousel-arrow-left {
-  left: 5px;
+  /* изменено левостороннее позиционирование */
+  left: -2px;
+
   top: 44%;
   display: block;
   background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
@@ -367,7 +443,9 @@ div.ant-carousel-arrow-left {
 
 /* правая стрелка слайдера */
 div.ant-carousel-arrow-right {
-  right: 5px;
+  /* изменено правостороннее позиционирование */
+  right: -4px;
+
   top: 44%;
   display: block;
   background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
@@ -381,7 +459,10 @@ div.ant-carousel-arrow-right {
 }
 
 .s4_desc {
-  display: block;
+  /* изменено позиционирование элемента */
+  display: flex;
+  flex-flow: column;
+
   margin: 0 20px;
   text-align: center;
   font-family: "Gotham Pro";
@@ -399,7 +480,7 @@ div.ant-carousel-arrow-right {
   left: 38%;
   font-size: 118px;
   font-family: "Coustard Regular";
-  color: rgb(247, 223, 8);
+  color: rgb(198, 233, 158);
 }
 
 .s4_list {
@@ -420,13 +501,22 @@ div.ant-carousel-arrow-right {
   content: "";
   position: absolute;
   display: block;
-  border: 1px solid rgb(247, 223, 8);
-  height: 174px;
+  border: 1px solid rgb(198, 233, 158);
+
+  /* изменена высота псевдоэлемента */
+  height: 170px;
+
   top: 50px;
   left: 28px;
 }
 
-/* стили секции 5 */
+/* добавлен селектор последнего элемента 
+списка для его скрытия в мобильной версии */
+.s4_list-item:last-child {
+  display: none;
+}
+
+/* стили секции 5 - изменений пока нет*/
 .s5 {
   display: flex;
   flex-flow: column;
@@ -456,12 +546,11 @@ div.ant-carousel-arrow-right {
 .list-outside li::before {
   content: "";
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   background-image: url(../images/icons/s5_icon.png);
   background-position: center;
   background-repeat: no-repeat;
-  top: 1px;
   left: 30px;
 }
 
@@ -480,7 +569,7 @@ div.ant-carousel-arrow-right {
 .s5_list-title::after {
   content: "";
   position: absolute;
-  border: 1px solid rgb(247, 223, 8);
+  border: 1px solid rgb(198, 233, 158);
   width: 40px;
   top: 62px;
   left: 32px;
@@ -507,7 +596,7 @@ div.ant-carousel-arrow-right {
   font-size: large;
 }
 
-/* стили футера */
+/* стили футера - изменений пока нет*/
 footer {
   background-color: black;
   color: grey;
@@ -517,7 +606,7 @@ footer {
   padding: 25px 0;
 }
 
-/* стили для планшетов */
+/* СТИЛИ ДЛЯ TABLET */
 @media (min-width: 768px) {
   .container {
     min-width: 768px;
@@ -562,6 +651,10 @@ footer {
   }
 
   /* стили секции 1 */
+  .s1 {
+    background: #535353 url(../images/s1_back-tablet.jpeg);
+  }
+
   .s1_title {
     font-size: 50px;
     font-weight: bold;
@@ -626,48 +719,77 @@ footer {
     margin-right: 0;
   }
 
-  .s2_list-item:hover {
-    background-color: black;
-    color: white;
-    border: 10px solid rgb(247, 223, 8);
-    transform: scale(1.2);
+  .s2_list-item:hover::before {
+    left: 28px;
   }
 
-  .s2_list-item::before {
-    content: "";
-    position: absolute;
-    width: 85px;
-    height: 85px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(247, 223, 8);
-    border-radius: 50%;
-    top: -41px;
-    left: 38px;
+  /* стили секции 3 */
+  .s3 {
+    background: #535353 url(../images/s3_back-tablet.jpeg);
   }
 
-  .s2_list-item:nth-child(1)::before {
-    background-image: url(../images/icons/s2_icon1.png);
+  .ant-carousel {
+    position: relative;
   }
 
-  .s2_list-item:nth-child(2)::before {
-    background-image: url(../images/icons/s2_icon2.png);
+  .ant-carousel-hider {
+    justify-content: center;
+    width: 768px;
   }
 
-  .s2_list-item:nth-child(3)::before {
-    background-image: url(../images/icons/s2_icon3.png);
+  .ant-carousel-element {
+    width: 334px;
   }
 
-  .s2_list-item:nth-child(4)::before {
-    background-image: url(../images/icons/s2_icon4.png);
+  .ant-carousel-element img {
+    width: 334px;
+    height: 240px;
   }
 
-  .s2_list-item p {
-    text-align: center;
+  .ant-carousel-element p {
+    margin-top: 18px;
+  }
+
+  .ant-carousel-arrow-left,
+  .ant-carousel-arrow-right {
+    z-index: 100;
+  }
+
+  div.ant-carousel-arrow-left {
+    left: -2px;
+  }
+
+  div.ant-carousel-arrow-right {
+    right: -2px;
+  }
+
+  /* стили секции 4 */
+  .s4_desc {
+    margin: 0 40px;
+    padding-left: 118px;
+    font-size: 23px;
+    padding-top: 80px;
+  }
+
+  .s4_desc::before {
+    top: 89%;
+    left: 8%;
+  }
+
+  .s4_list {
     font-size: 16px;
-    font-weight: bold;
-    font-family: "OpenSans";
-    margin-bottom: 5px;
+    margin-left: 306px;
+    margin-right: 40px;
+    padding-bottom: 80px;
+  }
+
+  .s4_list-item:last-child {
+    display: block;
+  }
+
+  .s4_list::before {
+    left: 0;
+    height: 150px;
   }
 
 }
