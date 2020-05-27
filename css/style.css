@@ -438,8 +438,7 @@ div.ant-carousel-arrow-left {
 
   top: 44%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png")
-    no-repeat;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
 }
 
 /* правая стрелка слайдера */
@@ -449,8 +448,7 @@ div.ant-carousel-arrow-right {
 
   top: 44%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png")
-    no-repeat;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
 }
 
 /* стили секции 4 */
@@ -524,7 +522,7 @@ div.ant-carousel-arrow-right {
   flex-flow: column;
 
   /* изменено центрирование */
-  align-items: flex-start;
+  align-items: center;
 
   background: url(../images/18.jpeg);
   background-position: center;
@@ -608,6 +606,7 @@ div.ant-carousel-arrow-right {
   color: red;
   font-size: large;
 }
+
 /* добавлен новый селектор */
 .contacts li:last-child p {
   padding-left: 45px;
@@ -720,7 +719,7 @@ footer {
 
   .s2_list {
     flex-flow: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0 40px;
     padding-bottom: 89px;
   }
@@ -823,10 +822,12 @@ footer {
     padding: 0;
     width: 246px;
   }
+
   .s5 div,
   .s5_list {
     padding-bottom: 20px;
   }
+
   .s5_list li {
     display: flex;
     flex-flow: row;
@@ -848,6 +849,7 @@ footer {
     top: 70px;
     left: 0;
   }
+
   .contacts_list-title::after {
     top: 60%;
   }
@@ -874,5 +876,87 @@ footer {
     font-size: 16px;
     font-weight: bold;
     padding: 22px 0;
+  }
+}
+
+/* СТИЛИ ДЛЯ DESKTOP */
+@media (min-width: 1280px) {
+  .container {
+    min-width: 1280px;
+  }
+
+  /* стили хэдэра */
+  .header_nav {
+    margin: 0 60px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav_list-item a {
+    font-size: 20px;
+  }
+
+  .nav_list-item:last-child::before {
+    left: -30px;
+    top: 3px;
+  }
+
+  /* стили секции 1 */
+  .s1 {
+    background: url(../images/s1_back-desk.png);
+    background-color: rgb(58, 53, 53);
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  .s1_title {
+    font-size: 72px;
+    padding: 229px 0 24px 159px;
+    margin: 0;
+  }
+
+  .s1_list {
+    font-size: 24px;
+    padding-left: 159px;
+    padding-bottom: 98px;
+    margin: 0;
+  }
+
+  .s1_list-item {
+    padding-left: 29px;
+    padding-bottom: 14px;
+  }
+
+  .s1_list-item::before {
+    top: 10px;
+    left: 0;
+  }
+
+  /* стили секции 2 */
+  .s2_title {
+    font-size: 44px;
+    padding-top: 78px;
+  }
+
+  .s2_list {
+    width: 768px;
+    padding-top: 44px;
+    padding-bottom: 90px;
+  }
+
+  .s2_list-item {
+    width: 178px;
+    height: 164px;
+  }
+
+  .s2_list-item::before {
+    top: -40px;
+    left: 46px;
+  }
+
+  .s2_list-item:hover::before {
+    left: 36px;
   }
 }
