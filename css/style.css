@@ -518,11 +518,14 @@ div.ant-carousel-arrow-right {
   display: none;
 }
 
-/* стили секции 5 - изменений пока нет*/
+/* стили секции 5 - !!есть изменения!!*/
 .s5 {
   display: flex;
   flex-flow: column;
+
+  /* изменено центрирование */
   align-items: flex-start;
+
   background: url(../images/18.jpeg);
   background-position: center;
 }
@@ -540,8 +543,8 @@ div.ant-carousel-arrow-right {
   font-family: "OpenSans";
   font-size: 14px;
   line-height: 24px;
-  position: relative;
   color: #201f1f;
+  position: relative;
 }
 
 .list-noTitle li::before,
@@ -580,6 +583,9 @@ div.ant-carousel-arrow-right {
 
 .contacts li {
   position: relative;
+
+  /* добавлен левый внутренний отступ */
+  padding-left: 35px;
 }
 
 .contacts li:last-child::before {
@@ -590,7 +596,10 @@ div.ant-carousel-arrow-right {
   background-image: url(../images/insta_oval-icon16.png);
   background-repeat: no-repeat;
   background-position: center;
+
+  /* изменено левое позиционирование */
   left: 33px;
+  /* добавлено верхнеее позиционирование */
   top: 25px;
 }
 
@@ -599,18 +608,7 @@ div.ant-carousel-arrow-right {
   color: red;
   font-size: large;
 }
-
-/* .contacts-list, */
-/* .contacts,
-.contacts li {
-  margin: 0;
-  padding: 0;
-} */
-
-.contacts li {
-  padding-left: 35px;
-}
-
+/* добавлен новый селектор */
 .contacts li:last-child p {
   padding-left: 45px;
 }
@@ -814,8 +812,6 @@ footer {
   /* стили секции 5 - изменений пока нет*/
   .s5 {
     flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
     padding: 76px 40px 0 129px;
     height: 550px;
   }
@@ -829,68 +825,39 @@ footer {
   }
   .s5 div,
   .s5_list {
-    min-width: 200px;
     padding-bottom: 20px;
-    /* display: flex;
-    flex-flow: column;
-    align-items: flex-start; */
   }
   .s5_list li {
+    display: flex;
+    flex-flow: row;
     padding-left: 40px;
     padding-bottom: 8px;
-    /* font-family: "OpenSans";
-    font-size: 14px;
-    line-height: 24px;
-    color: #a4a4a4; */
-    /* position: relative; */
   }
 
   .list-noTitle li::before,
   .list-special li::before,
   .list-outside li::before {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background-image: url(../images/icons/s5_icon.png);
-    background-position: center;
-    background-repeat: no-repeat;
     left: 0;
   }
 
   .s5_list-title {
     padding-bottom: 28px;
-    /* margin: 0 20px;
-    text-transform: uppercase;
-    font-family: "OpenSans";
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: bold;
-    color: white;
-    position: relative; */
   }
 
   .s5_list-title::after {
-    content: "";
-    position: absolute;
-    border: 1px solid rgb(198, 233, 158);
-    width: 40px;
-    left: 0;
     top: 70px;
+    left: 0;
   }
-  .contacts-list::after {
+  .contacts_list-title::after {
     top: 60%;
   }
 
   .contacts li {
-    display: flex;
-    flex-flow: row;
-    position: relative;
     padding: 0;
   }
 
   .contacts a {
-    margin-right: 30px;
+    margin-right: 20px;
   }
 
   .contacts li:last-child p {
@@ -898,21 +865,8 @@ footer {
   }
 
   .contacts li:last-child::before {
-    content: "";
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    background-image: url(../images/insta_cube-icon16.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 146px;
+    left: 136px;
     top: 1px;
-  }
-
-  .contacts a:hover,
-  .contacts a:focus {
-    color: red;
-    font-size: large;
   }
 
   /* стили футера - изменений пока нет*/
