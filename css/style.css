@@ -438,7 +438,8 @@ div.ant-carousel-arrow-left {
 
   top: 44%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png")
+    no-repeat;
 }
 
 /* правая стрелка слайдера */
@@ -448,7 +449,8 @@ div.ant-carousel-arrow-right {
 
   top: 44%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png")
+    no-repeat;
 }
 
 /* стили секции 4 */
@@ -520,8 +522,9 @@ div.ant-carousel-arrow-right {
 .s5 {
   display: flex;
   flex-flow: column;
-  align-items: center;
-  background-color: #303030;
+  align-items: flex-start;
+  background: url(../images/18.jpeg);
+  background-position: center;
 }
 
 .s5_list {
@@ -537,8 +540,8 @@ div.ant-carousel-arrow-right {
   font-family: "OpenSans";
   font-size: 14px;
   line-height: 24px;
-  color: #a4a4a4;
   position: relative;
+  color: #201f1f;
 }
 
 .list-noTitle li::before,
@@ -562,7 +565,7 @@ div.ant-carousel-arrow-right {
   font-size: 18px;
   line-height: 28px;
   font-weight: bold;
-  color: white;
+  color: rgb(65, 41, 10);
   position: relative;
 }
 
@@ -584,16 +587,32 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 22px;
   height: 22px;
-  background-image: url(../images/icons/icon_viber.png);
+  background-image: url(../images/insta_oval-icon16.png);
   background-repeat: no-repeat;
   background-position: center;
-  left: 46px;
+  left: 33px;
+  top: 25px;
 }
 
 .contacts a:hover,
 .contacts a:focus {
   color: red;
   font-size: large;
+}
+
+/* .contacts-list, */
+/* .contacts,
+.contacts li {
+  margin: 0;
+  padding: 0;
+} */
+
+.contacts li {
+  padding-left: 35px;
+}
+
+.contacts li:last-child p {
+  padding-left: 45px;
 }
 
 /* стили футера - изменений пока нет*/
@@ -792,4 +811,114 @@ footer {
     height: 150px;
   }
 
+  /* стили секции 5 - изменений пока нет*/
+  .s5 {
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 76px 40px 0 129px;
+    height: 550px;
+  }
+
+  .s5_list-title,
+  .s5_list,
+  .s5_list li {
+    margin: 0;
+    padding: 0;
+    width: 246px;
+  }
+  .s5 div,
+  .s5_list {
+    min-width: 200px;
+    padding-bottom: 20px;
+    /* display: flex;
+    flex-flow: column;
+    align-items: flex-start; */
+  }
+  .s5_list li {
+    padding-left: 40px;
+    padding-bottom: 8px;
+    /* font-family: "OpenSans";
+    font-size: 14px;
+    line-height: 24px;
+    color: #a4a4a4; */
+    /* position: relative; */
+  }
+
+  .list-noTitle li::before,
+  .list-special li::before,
+  .list-outside li::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/icons/s5_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+  }
+
+  .s5_list-title {
+    padding-bottom: 28px;
+    /* margin: 0 20px;
+    text-transform: uppercase;
+    font-family: "OpenSans";
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    color: white;
+    position: relative; */
+  }
+
+  .s5_list-title::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(198, 233, 158);
+    width: 40px;
+    left: 0;
+    top: 70px;
+  }
+  .contacts-list::after {
+    top: 60%;
+  }
+
+  .contacts li {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    padding: 0;
+  }
+
+  .contacts a {
+    margin-right: 30px;
+  }
+
+  .contacts li:last-child p {
+    padding-left: 25px;
+  }
+
+  .contacts li:last-child::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/insta_cube-icon16.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 146px;
+    top: 1px;
+  }
+
+  .contacts a:hover,
+  .contacts a:focus {
+    color: red;
+    font-size: large;
+  }
+
+  /* стили футера - изменений пока нет*/
+  footer {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 22px 0;
+  }
 }
