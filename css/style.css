@@ -268,9 +268,9 @@ ul {
   width: 170px;
   height: 170px;
   border: 2px solid rgb(198, 233, 158);
-  padding: 50px;
+  padding-top: 55px;
   position: relative;
-
+  text-align: center;
   /* изменен правый внешний отсуп 
   на общий внешний и его размер */
   margin: 20px;
@@ -278,9 +278,12 @@ ul {
 
 .s2_list-item:hover {
   background-color: black;
-  color: white;
   border: 10px solid rgb(198, 233, 158);
   transform: scale(1.2);
+}
+
+.s2_list-item a:hover {
+  color: white;
 }
 
 /* добавлен селектор для псевлоэлемента при ховере,
@@ -318,11 +321,12 @@ ul {
   background-image: url(../images/icons/s2_icon4.png);
 }
 
-.s2_list-item p {
-  text-align: center;
+.s2_list-item a {
   font-size: 16px;
   font-weight: bold;
   font-family: "OpenSans";
+  color: #201f1f;
+  display: block;
   margin-bottom: 5px;
 }
 
@@ -855,19 +859,19 @@ footer {
   }
 
   .contacts li {
-    padding: 0;
+    padding: 0 25px 0 0;
   }
 
   .contacts a {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .contacts li:last-child p {
-    padding-left: 25px;
+    padding-left: 10px;
   }
 
   .contacts li:last-child::before {
-    left: 136px;
+    left: 110px;
     top: 1px;
   }
 
@@ -958,5 +962,48 @@ footer {
 
   .s2_list-item:hover::before {
     left: 36px;
+  }
+
+  /* стили секции 3 */
+  .s3 {
+    background: #535353 url(../images/s3_back-desktop.jpeg);
+  }
+
+  .ant-carousel-hider {
+    width: 1280px;
+  }
+
+  .ant-carousel-element {
+    width: 570px;
+    margin: 0 25px;
+    padding: 85px 0;
+  }
+
+  .ant-carousel-element img {
+    width: 570px;
+    height: 344px;
+  }
+
+  div.ant-carousel-arrow-left {
+    left: 20px;
+  }
+
+  div.ant-carousel-arrow-right {
+    right: 20px;
+  }
+
+  /* стили секции 4 */
+  .s4_desc {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 60px;
+    padding-left: 250px;
+    text-align: left;
+  }
+
+  .s4_desc::before {
+    font-size: 236px;
+    top: 102%;
+    left: 10%;
   }
 }
