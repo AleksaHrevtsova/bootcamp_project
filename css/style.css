@@ -26,6 +26,18 @@
   font-weight: bold;
 }
 
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('GothamPro-Bold.eot');
+  src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+    url('GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('GothamPro-Bold.woff') format('woff'),
+    url('GothamPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Coustard Regular";
   src: url(../fonts/Coustard-Regular.ttf) format("truetype");
@@ -442,8 +454,7 @@ div.ant-carousel-arrow-left {
 
   top: 44%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png")
-    no-repeat;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
 }
 
 /* правая стрелка слайдера */
@@ -453,8 +464,7 @@ div.ant-carousel-arrow-right {
 
   top: 44%;
   display: block;
-  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png")
-    no-repeat;
+  background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
 }
 
 /* стили секции 4 */
