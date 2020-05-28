@@ -17,18 +17,18 @@
   font-weight: bold;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Gotham Pro Bold";
   src: url(../fonts/GothamPro-Bold.eot) format("embedded-opentype"),
     url(../fonts/GothamPro-Bold.ttf) format("truetype"),
     url(../fonts/GothamPro-Bold.woff) format("woff");
   font-style: normal;
   font-weight: bold;
-}
+} */
 
 
 @font-face {
-  font-family: 'Gotham Pro';
+  font-family: 'Gotham Pro Bold';
   src: url('GothamPro-Bold.eot');
   src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
     url('GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
