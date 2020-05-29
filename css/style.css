@@ -26,7 +26,6 @@
   font-weight: bold;
 }
 
-
 /* @font-face {
   font-family: 'Gotham Pro Bold';
   src: url('GothamPro-Bold.eot');
@@ -1018,4 +1017,45 @@ footer {
     top: 102%;
     left: 10%;
   }
+
+  /* стили секции 5 */
+  .s5 {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+    padding: 76px 60px 74px 237px;
+    background: rgb(253, 245, 171) url(../images/s5_bottom-dwsk.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position-x: unset;
+  }
+
+  .s5_list-title,
+  .s5_list,
+  .s5_list li {
+    width: 296px;
+  }
+
+  .s5 div,
+  .s5_list {
+    padding-bottom: 20px;
+  }
+
+  .s5_list-title::after {
+    top: 71%;
+    left: 0;
+  }
+
+  .contacts {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .contacts li {
+    width: auto;
+  }
+
 }
