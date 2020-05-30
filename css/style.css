@@ -240,6 +240,7 @@ ul {
 
 .nav_list-item:last-child {
   position: relative;
+  padding-right: 10px;
 }
 
 .nav_list-item:last-child::before {
@@ -321,6 +322,7 @@ ul {
   margin: 0 auto;
   padding-bottom: 66px;
   position: relative;
+  padding-right: 20px;
 }
 
 /* псевдоэлементы, создающие стрелку внизу секции
@@ -336,12 +338,13 @@ ul {
 }
 
 .s1_bottom-element::before {
-  transform: rotate(-63deg);
-  left: -16px;
+  transform: rotate(-66deg);
+  left: -17px;
 }
 
+
 .s1_bottom-element::after {
-  transform: rotate(28deg);
+  transform: rotate(30deg);
 }
 
 .s1_list-item {
@@ -1032,6 +1035,10 @@ footer {
     font-size: 20px;
   }
 
+  .nav_list-item:last-child {
+    padding-right: 30px;
+  }
+
   .nav_list-item:last-child::before {
     left: 77%;
     top: 0;
@@ -1190,7 +1197,6 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 95%;
   }
 
   .header li a {
