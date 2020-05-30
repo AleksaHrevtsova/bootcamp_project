@@ -98,9 +98,10 @@ ul {
 .header li a {
   display: block;
   padding: 10px 10px;
-  border: 1px solid #6c6e795b;
+  border-bottom: 2px solid #6c6e795b;
   text-decoration: none;
   color: #201f1f;
+  text-transform: uppercase;
 }
 
 .header li a:hover,
@@ -1182,6 +1183,7 @@ footer {
   .header li {
     float: left;
     display: flex;
+    padding-bottom: 0;
   }
 
   .header {
