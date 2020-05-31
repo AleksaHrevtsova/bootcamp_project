@@ -158,6 +158,7 @@ ul {
 
 .header li {
   padding-top: 20px;
+  padding-right: auto;
 }
 
 .header li a {
@@ -190,7 +191,8 @@ ul {
 .header .menu-icon {
   display: flex;
   border: 1px solid;
-  padding: 10px;
+  padding: 15px;
+  margin: 0 20px;
   position: relative;
   user-select: none;
   cursor: pointer;
@@ -333,8 +335,8 @@ ul {
 }
 
 .s1_bottom-element::before {
-  transform: rotate(-66deg);
-  left: -17px;
+  transform: rotate(-60deg);
+  left: -18px;
 }
 
 
@@ -786,6 +788,10 @@ footer {
   .nav_list {
     display: flex;
     flex-flow: row;
+    padding: 0;
+  }
+
+  .header li {
     padding: 0;
   }
 
