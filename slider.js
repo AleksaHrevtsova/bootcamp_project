@@ -12,7 +12,7 @@ function Ant(crslId) {
   this.crslList = this.crslRoot.querySelector(".ant-carousel-list");
   this.crslElements = this.crslList.querySelectorAll(".ant-carousel-element");
   this.crslElemFirst = this.crslList.querySelector(".ant-carousel-element");
-  this.crsElemImg - this.crsList.querySelector(".img");
+  //   this.crsElemImg - this.crsList.querySelector(".img");
   this.leftArrow = this.crslRoot.querySelector("div.ant-carousel-arrow-left");
   this.rightArrow = this.crslRoot.querySelector("div.ant-carousel-arrow-right");
   this.indicatorDots = this.crslRoot.querySelector("div.ant-carousel-dots");

@@ -341,8 +341,8 @@ ul {
 
 
 .s1_bottom-element::after {
-  transform: rotate(25deg);
-  left: 15px;
+  transform: rotate(23deg);
+  left: 16px;
 }
 
 .s1_list-item {
@@ -554,8 +554,8 @@ ul {
   left: 0;
 }
 
-.ant-carousel-arrow-left,
-.ant-carousel-arrow-right {
+div .ant-carousel-arrow-left,
+div .ant-carousel-arrow-right {
   /* изменена длина элемента */
   width: 24px;
   height: 40px;
@@ -589,6 +589,40 @@ div.ant-carousel-arrow-right {
   display: block;
   background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
 }
+
+/* ховер левой стрелки слайдера */
+div.ant-carousel-arrow-left:hover {
+  opacity: 1;
+}
+
+/* ховер правой стрелки слайдера */
+div.ant-carousel-arrow-right:hover {
+  opacity: 1;
+}
+
+/* контейнер с точками слайдера */
+div.ant-carousel-dots {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 64px;
+  z-index: 30;
+  text-align: center;
+}
+
+/* точки слайдера */
+span.ant-dot {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  padding: 0;
+  display: inline-block;
+  background-color: #bbb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 /* стили секции 4 */
 .s4 {
@@ -1078,7 +1112,7 @@ footer {
 
   .nav_list-item:last-child::before {
     left: 77%;
-    top: 0;
+    top: -3px;
   }
 
   /* стили секции 1 */
