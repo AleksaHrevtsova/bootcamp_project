@@ -336,12 +336,13 @@ ul {
 
 .s1_bottom-element::before {
   transform: rotate(-60deg);
-  left: -18px;
+  left: -2px;
 }
 
 
 .s1_bottom-element::after {
-  transform: rotate(30deg);
+  transform: rotate(25deg);
+  left: 15px;
 }
 
 .s1_list-item {
