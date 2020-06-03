@@ -132,8 +132,48 @@ console.log(leftArrow);
 let rightArrow = document.querySelector("div.ant-carousel-arrow-right");
 console.log(rightArrow);
 
-let indicatorDots = document.querySelector('.ant-carousel-dots');
+let indicatorDots = document.querySelector(".ant-carousel-dots");
 console.log(indicatorDots);
 
+// // ffffffffffffffffffffffffffffffff
+let elm;
+console.log(elm); // undefined
+
+elm = crlsList.lastElementChild; // <li...
+console.log(elm);
+
+let buf;
+console.log(buf);// undefined
 
 
+buf = elm.cloneNode(true);
+console.log(buf); // <li...
+
+crlsList.insertBefore(buf, crlsList.firstElementChild);
+crlsList.removeChild(elm);
+
+console.log(crlsList);
+
+// // dddddddddddddddddddddddddddddd
+
+// 1
+leftArrow.addEventListener("click", leftArrowClick);
+
+function leftArrowClick() {
+  alert("СРАБОТАЛ КЛИК НА ЛЕВОЙ СТРЕЛКЕ");
+}
+
+rightArrow.addEventListener("click", rightArrowClick);
+
+function rightArrowClick() {
+  alert("СРАБОТАЛ КЛИК НА ПРАВОЙ СТРЕЛКЕ");
+}
+
+// 2
+leftArrow.addEventListener("click", () => {
+  alert("IT`S a LEFT PART");
+});
+
+rightArrow.addEventListener("click", () => {
+  alert("IT`S a RIGHT PART");
+});
