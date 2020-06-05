@@ -135,45 +135,41 @@ console.log(rightArrow);
 let indicatorDots = document.querySelector(".ant-carousel-dots");
 console.log(indicatorDots);
 
-// // ffffffffffffffffffffffffffffffff
-let elm;
-console.log(elm); // undefined
+//
 
-elm = crlsList.lastElementChild; // <li...
-console.log(elm);
+let elm;
+console.log(elm); // undefuned
+
+// получаем ссылку на последний элемент списка
+elm = crlsList.lastElementChild;
+console.log("последний элемент списка", elm);
 
 let buf;
-console.log(buf);// undefined
+console.log(buf); // undefuned
 
-
+// делаем глубокую копию последнего элемента списка
 buf = elm.cloneNode(true);
-console.log(buf); // <li...
+console.log("клон последнего элемента", buf);
 
+// встраиваем клон последнего элемента в начало списка
 crlsList.insertBefore(buf, crlsList.firstElementChild);
-crlsList.removeChild(elm);
+// исходный последний элемент списка удаляем
+// crlsList.removeChild(elm);
+elm.remove();
 
+// выводим обновленный список
 console.log(crlsList);
 
-// // dddddddddddddddddddddddddddddd
+// dddddddddddddddddddddddddddddd
 
 // 1
 leftArrow.addEventListener("click", leftArrowClick);
+rightArrow.addEventListener("click", rightArrowClick);
 
 function leftArrowClick() {
   alert("СРАБОТАЛ КЛИК НА ЛЕВОЙ СТРЕЛКЕ");
 }
 
-rightArrow.addEventListener("click", rightArrowClick);
-
 function rightArrowClick() {
   alert("СРАБОТАЛ КЛИК НА ПРАВОЙ СТРЕЛКЕ");
 }
-
-// 2
-leftArrow.addEventListener("click", () => {
-  alert("IT`S a LEFT PART");
-});
-
-rightArrow.addEventListener("click", () => {
-  alert("IT`S a RIGHT PART");
-});

@@ -1,32 +1,30 @@
 "use strict";
 
-function Ant(crslId) {
+const Ant = function (crslId) {
   let id = document.getElementById(crslId);
   if (id) {
     this.crslRoot = id;
   } else {
     this.crslRoot = document.querySelector(".ant-carousel");
   }
-
-  // Carousel objects
+  // все объекты нашего слайдера
   this.crslList = this.crslRoot.querySelector(".ant-carousel-list");
-  this.crslElements = this.crslList.querySelectorAll(".ant-carousel-element");
-  this.crslElemFirst = this.crslList.querySelector(".ant-carousel-element");
+  this.crslElements = this.crslRoot.querySelectorAll(".ant-carousel-element");
+  this.crslElemFirst = this.crslRoot.querySelector(".ant-carousel-element");
   this.leftArrow = this.crslRoot.querySelector("div.ant-carousel-arrow-left");
   this.rightArrow = this.crslRoot.querySelector("div.ant-carousel-arrow-right");
-  this.indicatorDots = this.crslRoot.querySelector("div.ant-carousel-dots");
-
-  // Initialization
+  this.indicatorDots = this.crslRoot.querySelector(".ant-carousel-dots");
+  // запуск слайдера
   this.options = Ant.defaults;
   Ant.initialize(this);
-}
+};
 
 Ant.defaults = {
   // Default options for the carousel
   elemVisible: 1, // Кол-во отображаемых элементов в карусели
   loop: true, // Бесконечное зацикливание карусели
   auto: true, // Автоматическая прокрутка
-  interval: 6000, // Интервал между прокруткой элементов (мс)
+  interval: 1500, // Интервал между прокруткой элементов (мс)
   speed: 750, // Скорость анимации (мс)
   touch: true, // Прокрутка  прикосновением
   arrows: true, // Прокрутка стрелками
@@ -56,14 +54,15 @@ Ant.prototype.elemPrev = function (num) {
     let elm,
       buf,
       this$ = this;
+
     for (let i = 0; i < num; i++) {
       elm = this.crslList.lastElementChild;
       buf = elm.cloneNode(true);
       this.crslList.insertBefore(buf, this.crslList.firstElementChild);
-      this.crslList.removeChild(elm);
+      elm.remove();
     }
-    this.crslList.style.marginLeft = "-" + this.elemWidth * num + "px";
-    let compStyle = window.getComputedStyle(this.crslList).marginLeft;
+    // this.crslList.style.marginLeft = "-" + this.elemWidth * num + "px";
+    // let compStyle = window.getComputedStyle(this.crslList).marginLeft;
     this.crslList.style.cssText =
       "transition:margin " + this.options.speed + "ms ease;";
     this.crslList.style.marginLeft = "0px";
@@ -73,6 +72,7 @@ Ant.prototype.elemPrev = function (num) {
   }
 };
 
+// в видео 04 06
 Ant.prototype.elemNext = function (num) {
   num = num || 1;
 
@@ -122,6 +122,7 @@ Ant.prototype.dotOff = function (num) {
     "background-color:#556; cursor:default;";
 };
 
+// 05 06
 Ant.initialize = function (that) {
   // Constants
   that.elemCount = that.crslElements.length; // Количество элементов
@@ -139,15 +140,17 @@ Ant.initialize = function (that) {
   that.touchNext = true;
   let xTouch, yTouch, xDiff, yDiff, stTime, mvTime;
   let bgTime = getTime();
+  // console.log(bgTime);
 
   // Functions
   function getTime() {
     return new Date().getTime();
   }
+
   function setAutoScroll() {
     that.autoScroll = setInterval(function () {
       let fnTime = getTime();
-      if (fnTime - bgTime + 10 > that.options.interval) {
+      if (fnTime - bgTime + 20 > that.options.interval) {
         bgTime = fnTime;
         that.elemNext();
       }
