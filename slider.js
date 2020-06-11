@@ -224,7 +224,7 @@ Ant.initialize = function (that) {
       false
     );
   }
-
+// ршпшганеашнеагшащгнщап
   if (that.options.arrows) {
     // инициализация стрелок
     if (!that.options.loop)

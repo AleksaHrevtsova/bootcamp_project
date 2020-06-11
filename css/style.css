@@ -112,7 +112,8 @@ ul {
 
 .header li {
   padding-top: 20px;
-  padding-right: auto;
+  padding-left: 3px;
+  /* padding-right: auto; */
 }
 
 .header li a {
@@ -621,8 +622,7 @@ span.ant-dot {
   border: 1px solid rgb(198, 233, 158);
 
   /* изменена высота псевдоэлемента */
-  height: 170px;
-
+  height: 150px;
   top: 50px;
   left: 28px;
 }
@@ -952,7 +952,7 @@ footer {
 
   .s4_list::before {
     left: 0;
-    height: 150px;
+    /* height: 150px; */
   }
 
   /* стили секции 5 - изменений пока нет*/
